@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "{name}",
+      "cwd": "/srv/{name}",
+      "args": "runserver 0.0.0.0:7000",
+      "script": "manage.py",
+      "exec_mode": "fork",
+      "exec_interpreter": "python3"
+    }
+  ]
+}
