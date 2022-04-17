@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-yynr2r194*^*6bpz1cl-4%@4mne4kdl-n8kv=-e3cn(+p(=dvg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','api.superadmin.shop']
+ALLOWED_HOSTS = ['localhost','api.superadmin.shop','127.0.0.1']
 
 
 # Application definition
@@ -39,8 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'api_app'
-
+    'api_app',
+    'org',
+    'users',
+    'supercategory',
+    'category'
 ]
 
 MIDDLEWARE = [

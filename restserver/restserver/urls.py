@@ -19,10 +19,12 @@ from django.views import static
 
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api_app.urls')),
+    path('api/', include('org.urls')),
+    path('api/', include('users.urls')),
+    path('api/', include('supercategory.urls')),
+    path('api/', include('category.urls'))
 ]
 
