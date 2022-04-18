@@ -16,15 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from django.views import static
+from rest_framework_simplejwt import views as jwt_views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api_app.urls')),
-    path('api/', include('org.urls')),
-    path('api/', include('users.urls')),
-    path('api/', include('supercategory.urls')),
-    path('api/', include('category.urls'))
+    path('api/org/', include('org.urls')),
+    path('api/supercategory/', include('supercategory.urls')),
+    path('api/category/', include('category.urls')),
+    path('api/tutorials/', include('tutorials.urls')),
+    path('api/token/', jwt_views.TokenObtainPairView.as_view(),name ='token_obtain_pair'),
+    path('api/token/refresh/',jwt_views.TokenRefreshView.as_view(),name ='token_refresh'),
+    path('api/app/', include('app.urls')),
+    path('account/', include('account.urls')),
+    
 ]
 
