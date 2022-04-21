@@ -30,7 +30,9 @@ urlpatterns = [
     path('api/token/', jwt_views.TokenObtainPairView.as_view(),name ='token_obtain_pair'),
     path('api/token/refresh/',jwt_views.TokenRefreshView.as_view(),name ='token_refresh'),
     path('api/app/', include('app.urls')),
-    path('account/', include('account.urls')),
+    path('api/account/', include('account.urls')),
+    path('api/spurusers/', include('spurusers.urls')),
+    path('api/appusers/', include('appusers.urls')),
     
 ]
 

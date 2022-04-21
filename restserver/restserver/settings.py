@@ -48,10 +48,13 @@ INSTALLED_APPS = [
     'supercategory',
     'category',
     'tutorials',
-    'account'
+    'account',
+    'spurusers',
+    'appusers'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -59,7 +62,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
 ]
 
@@ -163,9 +165,6 @@ REST_FRAMEWORK = {
     ],
 }
 
-CORS_ALLOW_ALL_ORIGINS = True   
+ALLOWED_HOSTS=['*']
 
-CORS_ALLOWED_ORIGINS = [
-"https://superadmin.shop",
-"http://localhost:9000",
-]
+CORS_ALLOWED_ORIGINS =['http://localhost:9000']
