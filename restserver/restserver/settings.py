@@ -93,10 +93,10 @@ WSGI_APPLICATION = 'restserver.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'restserver',
-        'USER': 'restserver',
-        'PASSWORD': '10gXWOqeaf',
-        'HOST': '159.223.77.38',   # Or an IP Address that your DB is hosted on
+        'NAME': 'restapi',
+        'USER': 'restapi',
+        'PASSWORD': '10gXWOqeaf!',
+        'HOST': 'superadmin.shop',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
         'default-character-set':'utf8'
     }
