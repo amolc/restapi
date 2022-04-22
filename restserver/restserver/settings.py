@@ -50,7 +50,8 @@ INSTALLED_APPS = [
     'tutorials',
     'account',
     'spurusers',
-    'appusers'
+    'appusers',
+    'items'
 ]
 
 MIDDLEWARE = [
