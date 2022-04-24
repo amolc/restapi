@@ -1,0 +1,20 @@
+{
+    "folders": [
+		{
+			"path": "../../../NTU-Assignments/CZ3005 Artificial Intelligence/Lab 2"
+		},
+		{
+			"path": "../../../apiserver"
+		},
+		{
+			"path": "../../../stockmarketmantra"
+		},
+		{
+			"path": "../../../phpMyAdmin"
+		},
+		{
+			"path": "../.."
+		}
+	],
+    "settings": {}
+}
