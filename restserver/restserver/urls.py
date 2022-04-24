@@ -33,7 +33,5 @@ urlpatterns = [
     path('api/account/', include('account.urls')),
     path('api/spurusers/', include('spurusers.urls')),
     path('api/appusers/', include('appusers.urls')),
-    path('api/items/', include('items.urls')),
-    
 ]
 

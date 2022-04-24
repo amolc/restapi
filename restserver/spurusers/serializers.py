@@ -7,7 +7,6 @@ class SpurusersSerializer(serializers.ModelSerializer):
     email = serializers.CharField(max_length=200)
     password = serializers.CharField(max_length=200)
     userPhone = serializers.CharField(max_length=200)
-    userType = serializers.CharField(max_length=200)
     demoOrgID = serializers.CharField(max_length=200)
     demo_key = serializers.CharField(max_length=200)
     demo_value = serializers.CharField(max_length=200)
@@ -16,6 +15,7 @@ class SpurusersSerializer(serializers.ModelSerializer):
     live_value = serializers.CharField(max_length=200)
     paymentID = serializers.CharField(max_length=200)
     notes = serializers.CharField(max_length=200)
+    usertype = serializers.CharField(max_length=200)
 
     class Meta:
         model = Spurusers
