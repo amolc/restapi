@@ -1,0 +1,18 @@
+ id  |     name      |     slug     |        domain        |  country  |    timezone    | emergency_contact_id |                   img                   |    i
+mg_display    |  img_thumbnail   | background_color | business_referral_email | employee_referral_email | parent_org_id | user_welcome_email_id | address | del
+ivery_address_id | register_profile_facecams | create_chat_group | chat_enabled | p2p_email_template_id | has_secondary_logo | web_session_expiry | reward_rede
+mption_template_id | appreciation_last_reset_date | sample_data_file | signup_option | upload_benefit_receipt | organization_status | business_unit | region | 
+currency | enable_biometrics | source_id | source_origin | is_boid_client_org 
+
+| organization_id | is_user_created | is_active | source_id | source_origin 
+
+(1283, finance1, finance1, null, f, t, null, null).
+
+id              | integer                |           | not null | nextval('profiles_department_id_seq'::regclass)
+ name            | character varying(200) |           | not null | 
+ slug            | character varying(200) |           | not null | 
+ organization_id | integer                |           | not null | 
+ is_user_created | boolean                |           | not null | 
+ is_active       | boolean                |           | not null | 
+ source_id       | character varying(200) |           |          | 
+ source_origin   | smallint               |           |          | 

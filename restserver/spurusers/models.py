@@ -15,3 +15,7 @@ class Spurusers(models.Model):
     live_value = models.CharField(null=True, blank=True,max_length=200)
     paymentID = models.CharField(null=True, blank=True,max_length=200)
     notes = models.CharField(null=True, blank=True,max_length=200)
+    demo_budgetallocated = models.CharField(null=True, blank=True,max_length=200)
+    demo_budgetused = models.CharField(null=True, blank=True,max_length=200)
+    live_budgetallocated = models.CharField(null=True, blank=True,max_length=200)
+    live_budgetused = models.CharField(null=True, blank=True,max_length=200)

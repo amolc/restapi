@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'account',
     'spurusers',
     'appusers',
-    'items'
+    'items',
+    'portfolio'
 ]
 
 MIDDLEWARE = [
@@ -64,6 +65,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'request_logging.middleware.LoggingMiddleware',
 ]
 
 ROOT_URLCONF = 'restserver.urls'
@@ -169,3 +171,20 @@ REST_FRAMEWORK = {
 ALLOWED_HOSTS=['*']
 
 CORS_ALLOWED_ORIGINS =['http://localhost:9000']
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['console'],
+            'level': 'INFO',  # change debug level as appropiate
+            'propagate': False,
+        },
+    },
+}

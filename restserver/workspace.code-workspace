@@ -1,0 +1,16 @@
+{
+    "folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../shops/spurapp"
+		},
+		{
+			"path": "../../shops"
+		},
+		{
+			"path": "../../open"
+		}
+	]
+}
