@@ -1,12 +1,18 @@
 from django.db import models
 
 class Org(models.Model):
-    org_name = models.CharField(max_length=200)
-    org_address = models.CharField(max_length=200)
-    org_telephone = models.PositiveIntegerField()
-    org_zip = models.PositiveIntegerField()
-    org_email = models.CharField(max_length=200)
-    org_password = models.CharField(max_length=30)
+    name = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    password = models.CharField(max_length=30)
+    address = models.CharField(max_length=200)
+    address2 = models.CharField(max_length=200)
+    zip = models.CharField(max_length=200)
+    country = models.CharField(max_length=200)
+    telephone = models.PositiveIntegerField()
+    email = models.CharField(max_length=200)
+    password = models.CharField(max_length=30)
+    domain = models.CharField(max_length=30)
+    slug = models.CharField(max_length=30)
 
 
 

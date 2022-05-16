@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'spurusers',
     'appusers',
     'items',
-    'portfolio'
+    'portfolio',
+    'customers'
 ]
 
 MIDDLEWARE = [
@@ -170,7 +171,7 @@ REST_FRAMEWORK = {
 
 ALLOWED_HOSTS=['*']
 
-CORS_ALLOWED_ORIGINS =['http://localhost:9000']
+CORS_ALLOW_ALL_ORIGINS = True
 
 LOGGING = {
     'version': 1,

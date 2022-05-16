@@ -34,5 +34,7 @@ urlpatterns = [
     path('api/spurusers/', include('spurusers.urls')),
     path('api/appusers/', include('appusers.urls')),
     path('api/portfolio/', include('portfolio.urls')),
+    path('api/customers/', include('customers.urls')),
+    path('api/items/', include('items.urls')),
 ]
 
