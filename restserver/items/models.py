@@ -7,13 +7,14 @@ class Items(models.Model):
     price = models.CharField(max_length=200)
     currency = models.CharField(max_length=200)
     thumbnail = models.CharField(max_length=200)
-    picture = models.CharField(max_length=200)
+    picture = models.TextField(blank=True)
     longtext = models.CharField(max_length=200)
     itemcolor = models.CharField(max_length=200)
     itemsize = models.CharField(max_length=200)
     stockinhand = models.CharField(max_length=200)
     stockinwarehouse = models.CharField(max_length=200)
     uniquecode = models.CharField(max_length=200)
+    thumbnailimage = models.TextField(blank=True)
     
    
 

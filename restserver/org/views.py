@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.shortcuts import get_object_or_404
-
+import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -9,6 +9,7 @@ from .models import Org
 
 class OrgViews(APIView):
     def post(self, request):
+        logging.warning(request.data)
         serializer = OrgSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
@@ -28,6 +29,7 @@ class OrgViews(APIView):
 
 
     def patch(self, request, id=None):
+        id = request.data.get("id")
         item = Org.objects.get(id=id)
         serializer = OrgSerializer(item, data=request.data, partial=True)
         if serializer.is_valid():

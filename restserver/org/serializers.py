@@ -3,6 +3,7 @@ from .models import Org
 
 class OrgSerializer(serializers.ModelSerializer):
     name = serializers.CharField(max_length=30)
+    company = serializers.CharField(max_length=30)
     address = serializers.CharField(max_length=50)
     address2 = serializers.CharField(max_length=50)
     zip = serializers.CharField()

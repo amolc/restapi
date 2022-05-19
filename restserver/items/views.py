@@ -29,6 +29,7 @@ class ItemsViews(APIView):
 
 
     def patch(self, request, id=None):
+        id = request.data.get('id')
         item = Items.objects.get(id=id)
         serializer = ItemsSerializer(item, data=request.data, partial=True)
         if serializer.is_valid():

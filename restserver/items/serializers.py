@@ -8,13 +8,14 @@ class ItemsSerializer(serializers.ModelSerializer):
     price = serializers.CharField(max_length=200)
     currency = serializers.CharField(max_length=200)
     thumbnail = serializers.CharField(max_length=200)
-    picture = serializers.CharField(max_length=200)
+    picture = serializers.CharField(required=False)
     longtext = serializers.CharField(max_length=200)
     itemcolor = serializers.CharField(max_length=200)
     itemsize = serializers.CharField(max_length=200)
     stockinhand = serializers.CharField(max_length=200)
     stockinwarehouse = serializers.CharField(max_length=200) 
     uniquecode = serializers.CharField(max_length=200)
+    thumbnailimage = serializers.CharField(required=False)
 
 
     class Meta:

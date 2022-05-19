@@ -30,16 +30,16 @@ requests_log.propagate = True
 # token = data['token']
 # print(token)
 
-demoorgkey = "6013ABCCYCLESHDEMO6713"
-liveorgkey = "6013ABCCYCLESHLIVE2186"
-# WARNING:root:abc@abc.com
-# WARNING:root:I6IIF6688FSI36I883NF8TIFNF63T388e!
-# WARNING:root:F8NITF88TDDSSDNN388SISISI3FNI3INl!
+# demoorgkey = "6013ABCCYCLESHDEMO6713"
+# liveorgkey = "6013ABCCYCLESHLIVE2186"
+# # WARNING:root:abc@abc.com
+# # WARNING:root:I6IIF6688FSI36I883NF8TIFNF63T388e!
+# # WARNING:root:F8NITF88TDDSSDNN388SISISI3FNI3INl!
 
-demoemail = "demo@"+demoorgkey+".com"
-liveemail = "live@"+liveorgkey+".com"
-demosecret = "HYE7HLH3H36S6HBYSHEACBE3BYE3HSS1e!"
-livesecret = "B61YC1H1E1YC731S3B1ESESSAS3CCCE1l!"
+# demoemail = "demo@"+demoorgkey+".com"
+# liveemail = "live@"+liveorgkey+".com"
+# demosecret = "HYE7HLH3H36S6HBYSHEACBE3BYE3HSS1e!"
+# livesecret = "B61YC1H1E1YC731S3B1ESESSAS3CCCE1l!"
 
 
 
@@ -73,29 +73,29 @@ livesecret = "B61YC1H1E1YC731S3B1ESESSAS3CCCE1l!"
 
 
 
-# token = "3168d8ab436b7a39d085d014c3fda9401a029063"
-# hostname = 'http://localhost:8081'
-# my_headers = {"content-type":"application/json","User-agent":"Skor/6 Android|HUAWEI TIT-AL00|5.0|150"}
-
-# key = "Authorization"
-# authtoken = "Token "+ token
-# my_headers[key] = authtoken
-# print(my_headers)
-
-# # Get Rewards 
-# response = requests.get(hostname+'/rewards/api/rewards/',headers=my_headers )
-# data = response.json()
-# print(data)
-
-
+token = "77e93f00a6b37fddb2afbc648260d1c6c363a52d"
 hostname = 'http://localhost:8081'
-tokenheaders = {"content-type":"application/json",'User-agent':'Skor/6 Android|HUAWEI TIT-AL00|5.0|150'}
-authquery = '{"username": "amolch001@gmail.com","password":"ferrari1234" }'
-demoquery = '{"username": "demo@5465W2ORGANIZADEMO6279.com", "password": "626IIZ629G7AWG769R72Z6NAZGA672AAe!"}'
-response1 = requests.post(hostname+'/profiles/api/token-auth/',data=demoquery,headers=tokenheaders )
-authtokendata = response1.json()
-authtoken = authtokendata['token']
-print(authtoken)
+my_headers = {"content-type":"application/json","User-agent":"Skor/6 Android|HUAWEI TIT-AL00|5.0|150"}
+
+key = "Authorization"
+authtoken = "Token "+ token
+my_headers[key] = authtoken
+print(my_headers)
+
+# Get Rewards 
+response = requests.get(hostname+'/rewards/api/rewards/',headers=my_headers )
+data = response.json()
+print(data)
+
+
+# hostname = 'http://localhost:8081'
+# tokenheaders = {"content-type":"application/json",'User-agent':'Skor/6 Android|HUAWEI TIT-AL00|5.0|150'}
+# authquery = '{"username": "amolch001@gmail.com","password":"ferrari1234" }'
+# demoquery = '{"username": "demo@5465W2ORGANIZADEMO6279.com", "password": "626IIZ629G7AWG769R72Z6NAZGA672AAe!"}'
+# response1 = requests.post(hostname+'/profiles/api/token-auth/',data=demoquery,headers=tokenheaders )
+# authtokendata = response1.json()
+# authtoken = authtokendata['token']
+# print(authtoken)
 
 
 
