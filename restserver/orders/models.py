@@ -11,5 +11,17 @@ class Orders(models.Model):
     paymentId = models.CharField(max_length=200)
     amount = models.CharField(max_length=200)
     date = models.CharField(max_length=200)
+    setstatus = models.CharField(max_length=200)
+
+class OrderDetails(models.Model):
+    org_id = models.PositiveIntegerField()
+    orderid = models.PositiveIntegerField()
+    itemname = models.CharField(max_length = 100)
+    itemqty = models.CharField(max_length = 100)
+    itemcost = models.CharField(max_length = 100)
+    itemcolor = models.CharField(max_length = 100,default=None, blank=True, null=True)
+    itemsize = models.CharField(max_length = 100,default=None, blank=True, null=True)
+   
+    
    
     
