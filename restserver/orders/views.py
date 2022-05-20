@@ -28,7 +28,7 @@ class OrdersViews(APIView):
         items = {}
         items['org_id'] = data['org_id']
         items['orderid'] = orderId
-        items['itemname'] = data['name']
+        items['itemname'] = data['itemname']
         items['itemqty'] = data['qty']
         items['itemcost'] = data['price']
         print(items)
