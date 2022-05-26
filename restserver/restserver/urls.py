@@ -29,6 +29,8 @@ urlpatterns = [
     path('api/tutorials/', include('tutorials.urls')),
     path('api/token/', jwt_views.TokenObtainPairView.as_view(),name ='token_obtain_pair'),
     path('api/token/refresh/',jwt_views.TokenRefreshView.as_view(),name ='token_refresh'),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.jwt')),
     path('api/app/', include('app.urls')),
     path('api/account/', include('account.urls')),
     path('api/spurusers/', include('spurusers.urls')),
@@ -37,5 +39,6 @@ urlpatterns = [
     path('api/customers/', include('customers.urls')),
     path('api/items/', include('items.urls')),
     path('api/orders/', include('orders.urls')),
+    path('api/students/', include('student.urls')),
 ]
 

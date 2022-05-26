@@ -7,6 +7,7 @@ from rest_framework import status
 from .serializers import OrgSerializer
 from .models import Org
 
+
 class OrgViews(APIView):
     def post(self, request):
         logging.warning(request.data)
@@ -26,7 +27,6 @@ class OrgViews(APIView):
         items = Org.objects.all()
         serializer = OrgSerializer(items, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
-
 
     def patch(self, request, id=None):
         id = request.data.get("id")

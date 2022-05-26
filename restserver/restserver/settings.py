@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'djoser',
     'corsheaders',
     'api_app',
     'org',
@@ -54,7 +55,8 @@ INSTALLED_APPS = [
     'items',
     'portfolio',
     'customers',
-    'orders'
+    'orders',
+    'student',
 ]
 
 MIDDLEWARE = [
