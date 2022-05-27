@@ -21,14 +21,22 @@ requests_log.propagate = True
 
 
 
-
 # hostname = 'http://localhost:8081'
 # my_headers = {"content-type":"application/json",'User-agent':'Skor/6 Android|HUAWEI TIT-AL00|5.0|150'}
-# query = '{"username":"amolch001@gmail.com","password":"ferrari1234" }'
+# query = '{"username":"raja@hindustan.com","password":"10gXWOqeaf" }'
 # response = requests.post(hostname+'/profiles/api/token-auth/',data=query,headers=my_headers )
 # data = response.json()
 # token = data['token']
 # print(token)
+
+hostname = 'http://localhost:8081'
+my_headers = {"content-type":"application/json",'User-agent':'Skor/6 Android|HUAWEI TIT-AL00|5.0|150'}
+query = '{"email":"raja@hindustan.com"}'
+response = requests.post(hostname+'/profiles/api/users/reset_password/',data=query,headers=my_headers )
+data = response.json()
+print(data)
+
+
 
 # demoorgkey = "6013ABCCYCLESHDEMO6713"
 # liveorgkey = "6013ABCCYCLESHLIVE2186"
@@ -73,19 +81,19 @@ requests_log.propagate = True
 
 
 
-token = "77e93f00a6b37fddb2afbc648260d1c6c363a52d"
-hostname = 'http://localhost:8081'
-my_headers = {"content-type":"application/json","User-agent":"Skor/6 Android|HUAWEI TIT-AL00|5.0|150"}
+# token = "77e93f00a6b37fddb2afbc648260d1c6c363a52d"
+# hostname = 'http://localhost:8081'
+# my_headers = {"content-type":"application/json","User-agent":"Skor/6 Android|HUAWEI TIT-AL00|5.0|150"}
 
-key = "Authorization"
-authtoken = "Token "+ token
-my_headers[key] = authtoken
-print(my_headers)
+# key = "Authorization"
+# authtoken = "Token "+ token
+# my_headers[key] = authtoken
+# print(my_headers)
 
-# Get Rewards 
-response = requests.get(hostname+'/rewards/api/rewards/',headers=my_headers )
-data = response.json()
-print(data)
+# # Get Rewards 
+# response = requests.get(hostname+'/rewards/api/rewards/',headers=my_headers )
+# data = response.json()
+# print(data)
 
 
 # hostname = 'http://localhost:8081'

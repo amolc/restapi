@@ -1,7 +1,8 @@
 from django.urls import path
-from .views import ItemsViews
+from .views import ItemsViews,NewItemsViews
 
 urlpatterns = [
-    path('', ItemsViews.as_view()),
-    path('<int:id>', ItemsViews.as_view())
+    path('<int:org_id>/''', ItemsViews.as_view()),
+    path('<int:org_id>/''<int:id>', ItemsViews.as_view())
 ]
+

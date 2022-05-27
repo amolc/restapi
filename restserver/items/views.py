@@ -17,13 +17,13 @@ class ItemsViews(APIView):
         else:
             return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
-    def get(self, request, id=None):
+    def get(self, request,org_id=None,id=None):
         if id:
             item = Items.objects.get(id=id)
             serializer = ItemsSerializer(item)
             return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
 
-        items = Items.objects.all()
+        items = Items.objects.filter(org_id=org_id)
         serializer = ItemsSerializer(items, many=True)
         return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
 
@@ -42,3 +42,17 @@ class ItemsViews(APIView):
         item = get_object_or_404(Items, id=id)
         item.delete()
         return Response({"status": "success", "data": "Item Deleted"})
+
+
+class NewItemsViews(APIView):
+    def get(self, request,org_id=None, id=None):
+        # if id:
+        #     item = Items.objects.get(id=id)
+        #     serializer = ItemsSerializer(item)
+        #     return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+        items = Items.objects.filter(org_id=org_id)
+        serializer = ItemsSerializer(items, many=True)
+        return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+
+
+    
