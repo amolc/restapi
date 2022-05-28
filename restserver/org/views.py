@@ -42,3 +42,20 @@ class OrgViews(APIView):
         item = get_object_or_404(Org, id=id)
         item.delete()
         return Response({"status": "success", "data": "Item Deleted"})
+
+
+class OrgLoginView(APIView):
+
+    def post(self, request):
+        try:
+            user_var = Org.objects.get(email=request.data["email"])
+            serializer = OrgSerializer(user_var)
+            dpassword = serializer.data['password']
+            if request.data["password"] == dpassword:
+                data = serializer.data
+                return Response({"status": "success", "data": data, "msg": "True"})
+            else:
+                return Response({"status": "error", "msg": "Passwords do not match, try again"})
+        except Org.DoesNotExist:
+            user = None
+            return Response({"status": "error", "msg": "User Does not match, try again"})
